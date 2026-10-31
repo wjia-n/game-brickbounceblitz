@@ -143,10 +143,10 @@ class _GameScreenState extends State<GameScreen> {
       const Text('GAME OVER', style: TextStyle(fontFamilyFallback: const ['Noto Color Emoji'], color: Colors.white, fontSize: 32, fontWeight: FontWeight.bold)),
       const SizedBox(height: 8),
       Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-        Text('Score: ${e.score}', style: const TextStyle(fontFamilyFallback: const ['Noto Color Emoji'], color: Colors.white, fontSize: 22)),
+        Flexible(child: Text('Score: ${e.score}', style: const TextStyle(fontFamilyFallback: const ['Noto Color Emoji'], color: Colors.white, fontSize: 22))),
         const SizedBox(width: 16),
-        Text('Best combo: x${e.bestCombo}  •  Level ${e.level}',
-            style: const TextStyle(fontFamilyFallback: const ['Noto Color Emoji'], color: Colors.white70)),
+        Flexible(child: Text('Best combo: x${e.bestCombo}  •  Level ${e.level}',
+            style: const TextStyle(fontFamilyFallback: const ['Noto Color Emoji'], color: Colors.white70))),
       ]),
       const SizedBox(height: 24),
       TextButton(onPressed: () => Navigator.pop(context),
